@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi miss kulot 😍</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#250000,#5c0000,#8f0000);
+    font-family:'Poppins',sans-serif;
+    color:white;
+}
+
+/* FLOATING DECORATIONS */
+
+.floating{
+    position:absolute;
+    font-size:2rem;
+    opacity:.35;
+    animation:float 12s linear infinite;
+}
+
+.f1{left:10%;}
+.f2{left:25%;animation-delay:2s;}
+.f3{left:45%;animation-delay:4s;}
+.f4{left:70%;animation-delay:6s;}
+.f5{left:90%;animation-delay:8s;}
+
+@keyframes float{
+    from{
+        transform:translateY(110vh);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+/* SCREENS */
+
+.screen{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    animation:fadeIn 1s ease;
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* PASSWORD */
+
+.password-box{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+
+    padding:40px;
+    border-radius:25px;
+    width:340px;
+
+    text-align:center;
+}
+
+.password-box h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+}
+
+.password-box input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    margin-top:15px;
+}
+
+.password-box button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+}
+
+/* PHOTO */
+
+.photo{
+    width:320px;
+    border-radius:20px;
+    cursor:pointer;
+
+    box-shadow:0 0 40px rgba(0,0,0,.4);
+
+    animation:floatPhoto 4s ease-in-out infinite;
+}
+
+@keyframes floatPhoto{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.click-text{
+    margin-top:20px;
+}
+
+/* ENVELOPE */
+
+.envelope{
+    width:360px;
+    height:240px;
+    position:relative;
+    cursor:pointer;
+}
+
+.envelope-body{
+    width:100%;
+    height:100%;
+    background:#a50000;
+    border-radius:12px;
+    position:absolute;
+}
+
+.envelope-flap{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:#d60000;
+
+    clip-path:polygon(
+    0 0,
+    100% 0,
+    50% 60%
+    );
+
+    transform-origin:top;
+    transition:1s;
+}
+
+.envelope:hover .envelope-flap{
+    transform:rotateX(180deg);
+}
+
+.envelope{
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.03);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* LETTER */
+
+.letter{
+    background:#fff8f8;
+    color:#5a0000;
+
+    width:750px;
+    max-width:90vw;
+
+    max-height:80vh;
+    overflow-y:auto;
+
+    border-radius:20px;
+    padding:40px;
+
+    box-shadow:0 0 40px rgba(0,0,0,.4);
+
+    animation:letterAppear 1s ease;
+}
+
+@keyframes letterAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.letter h2{
+    text-align:center;
+    margin-bottom:25px;
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+}
+
+.poem{
+    line-height:2;
+    text-align:center;
+    font-size:1.1rem;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+/* BUTTONS */
+
+.final-button{
+    display:block;
+
+    margin-top:30px;
+
+    text-decoration:none;
+
+    background:#b30000;
+    color:white;
+
+    padding:15px;
+    border-radius:12px;
+
+    text-align:center;
+}
+
+.final-button:hover{
+    background:#d40000;
+}
+
+/* MUSIC */
+
+.music-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+}
+
+.music-btn a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:rgba(255,255,255,.12);
+
+    padding:14px 18px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 20px rgba(255,77,109,.4);
+}
+
+</style>
+</head>
+<body>
+
+<!-- Floating Decorations -->
+
+<div class="floating f1">🐈</div>
+<div class="floating f2">🌺</div>
+<div class="floating f3">🐈‍⬛</div>
+<div class="floating f4">🌹</div>
+<div class="floating f5">🌸</div>
+
+<!-- MUSIC -->
+
+<div class="music-btn">
+<a href="https://vocaroo.com/embed/1ohsePIInp4L?autoplay=0" target="_blank">
+Play this while reading?
+</a>
+</div>
+
+<!-- PASSWORD -->
+
+<div id="passwordScreen" class="screen">
+
+<div class="password-box">
+
+<h1>HI ELLYPOT😝</h1>
+
+<p>Enter the password</p>
+
+<input type="password" id="passwordInput" placeholder="Password">
+
+<button onclick="checkPassword()">Open</button>
+
+</div>
+</div>
+
+<!-- PHOTO -->
+
+<div id="photoScreen" class="screen hidden">
+
+<img
+src="https://i.imgur.com/Nt05LDf.jpeg"
+class="photo"
+onclick="showEnvelope()">
+
+<p class="click-text">Click the pic 😁😉</p>
+
+</div>
+
+<!-- ENVELOPE -->
+
+<div id="envelopeScreen" class="screen hidden">
+
+<div class="envelope" onclick="openLetter()">
+
+<div class="envelope-body"></div>
+<div class="envelope-flap"></div>
+
+</div>
+
+<p style="margin-top:20px;">Click the envelope 😉😁</p>
+
+</div>
+
+<!-- LETTER -->
+
+<div id="letterScreen" class="screen hidden">
+
+<div class="letter">
+
+<h2>Tula #2 Kriminal</h2>
+
+<div class="poem">
+
+Ikagagalit mo ba kung pagiging kriminal ang pangarap ko? <br>
+Marahil ikaw ay magugulat o ang isip ay magugulo,<br>
+Pero oo desidido na ako,<br>
+Wala nang makapipigil sa plano kong ito,<br><br>
+
+Handa akong labagin ang lahat ng batas,<br>
+Magnanakaw ako para masabitan ka ng kwintas,<br>
+Manghoholdap ako para makakain tayo sa labas,<br>
+Lahat ay handa akong gawin nang hirap ay di mo madanas,<br><br>
+
+Siyempre biro lang lahat ng iyon,<br>
+Gagawin ko ang lahat nang sa hirap ay makaahon,<br>
+Magkaroon ng lupa at mansyon,<br>
+At siyempre tayo ang titira doon.<br><br>
+
+Pero ako ba ay dadakipin at huhulihin?<br>
+Kung ang batas na kaya ko lang labagin,<br>
+Ay ang utos ni tita sa akin,<br>
+Nang sa gayon sa wakas ikaw ay aking maligawan na rin!
+
+</div>
+
+<a
+class="final-button"
+href="https://docs.google.com/document/d/1b95d9jf3jcOsWdBVUdTe6KuW_zGp2LkOQO6wMpRBO40/edit?usp=sharing"
+target="_blank">
+
+To clear things up...😉
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function checkPassword(){
+
+const password = "01162008";
+
+const input =
+document.getElementById("passwordInput").value;
+
+if(input === password){
+
+document.getElementById("passwordScreen").classList.add("hidden");
+
+document.getElementById("photoScreen").classList.remove("hidden");
+
+}else{
+
+alert("Engggkkkk Engotttt mm/dd/yyyy ulit 😝");
+
+}
+}
+
+function showEnvelope(){
+
+document.getElementById("photoScreen").classList.add("hidden");
+
+document.getElementById("envelopeScreen").classList.remove("hidden");
+
+}
+
+function openLetter(){
+
+document.getElementById("envelopeScreen").classList.add("hidden");
+
+document.getElementById("letterScreen").classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
